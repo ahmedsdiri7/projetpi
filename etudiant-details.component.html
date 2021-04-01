@@ -1,0 +1,59 @@
+<!--page for show details using two way binding + routing with parameter-->
+
+<app-header></app-header>
+<div *ngIf="etudiants">
+
+<div class="jumbotron text-center hoverable p-4">
+
+    <!-- Grid row -->
+    <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-4 offset-md-1 mx-3 my-3">
+
+            <!-- Featured image -->
+            <div class="view overlay">
+                <img src="../../assets/couverture.jpg" class="img-fluid" alt="lost&found">
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-7 text-md-left ml-3 mt-3">
+
+            <!-- Excerpt -->
+            <div class="green-text">
+                <h6 class="h6 pb-1"><i class="fas fa-desktop pr-1"></i> {{etudiants.lname}}</h6>
+            </div>
+
+            <h4 class="h4 mb-4">L'article est : {{etudiants.lname}} </h4>
+
+            <p class="font-weight-normal">Description : {{etudiants.sexe}}</p>
+            <p class="font-weight-normal">Trouvé par Mme/Mr <a><strong>{{etudiants.fname}}</strong></a></p>
+            <p class="font-weight-normal"><i class="fa fa-envelope prefix grey-text"></i> Mail :<a><strong>{{etudiants.email}}</strong></a></p>
+            <p class="font-weight-normal"><i class="fas fa-phone mt-4 fa-2x"></i>Tel : <a><strong>{{etudiants.age}}</strong></a></p>
+
+
+            <button (click)="gotoList()" class="btn btn-info" style="margin-left: 10px">Retour à l'acceuil</button><br>
+
+
+
+        </div>
+        <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+</div>
+
+
+
+
+</div>
+
+<br>
+<br>
